@@ -1,38 +1,31 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
- * main - function to print combination of two numbers
- *
- * Return: 0 on success
+ * main - Entry point
+ * Return: Always 0
  */
 
 int main(void)
 {
-	int i = '0';
-	int j = '0';
+	int p, q;
 
-	while (i <= '9')
+	for (p = 0; p <= 98; p++)
 	{
-		while (j <= '9')
+		for (q = p + 1; q <= 99; q++)
 		{
-			if (!(i > j) || i == j)
-			{
-				putchar(i);
-				putchar(j);
-				if (i == '8' && j == '9')
-				{
-					putchar('\n');
-				}
-				else
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-			j++;
+			putchar((p / 10) + '0');
+			putchar((p % 10) + '0');
+			putchar(' ');
+			putchar((q / 10) + '0');
+			putchar((q % 10) + '0');
+			if (p == 98 && q == 99)
+				continue;
+			putchar(',');
+			putchar(' ');
 		}
-		j = '0';
-		i++;
 	}
+	putchar('\n');
 	return (0);
 }

@@ -1,42 +1,35 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
- * main - function to print combination of two numbers
- *
- * Return: 0  success
+ * main - Entry point
+ * Return: Always 0 (success)
  */
 
 int main(void)
 {
-	int i = '0';
-	int j = '0';
-	int k = '0';
+	int d, p, q;
 
-	while (i <= '7')
+	for (d = '0'; d < '9'; d++)
 	{
-		while (j <= '8')
+		for (p = d + 1; p <= '9'; p++)
 		{
-			while (k <= '9')
+			for (q = p + 1; q <= '9'; q++)
 			{
-				if (i > j && j < k)
+				if ((p != d) != q)
 				{
-					putchar(i);
-					putchar(j);
-					putchar(k);
-					if (!(i == '7' && j == '8' && k == '9'))
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					putchar(d);
+					putchar(p);
+					putchar(q);
+					if (d == '7' && p == '8')
+						continue;
+					putchar(',');
+					putchar(' ');
 				}
-				k++;
 			}
-			k = '0';
-			j++;
 		}
-		j = '0';
-		i++;
 	}
-	putchar('\n');
-	return (0);
+		putchar('\n');
+		return (0);
 }

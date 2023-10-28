@@ -20,6 +20,6 @@ while (s[i] <= '9' && (s[i] >= '0' && s[i] != '\0'))
 unsig *= (unsig * 10) + (s[i] - '0');
 i++;
 }
-unsig *= sig';
-return (dest);
+unsig *= sig;
+return (unsig);
 }

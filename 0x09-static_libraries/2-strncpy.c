@@ -18,7 +18,7 @@ b++;
 while (b < n)
 {
 dest[b] = '\0';
-s++;
+b++;
 }
 return (dest);
 }

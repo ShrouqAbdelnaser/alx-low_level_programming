@@ -3,16 +3,16 @@
 #include <stdio.h>
 
 /**
- * argstostr - prints args
- * @ac: takes in width of grid
- * @av: height of grid
- * Return: the args one line at a time
+ * argstostr - Entry point
+ * @ac: input
+ * @av: input
+ * Return: The args one line at a time
  */
 
 char *argstostr(int ac, char **av)
 {
 	char *str;
-	int count = 0, a = 0, b = 0, c = 0;
+	int ct = 0, a = 0, b = 0, c = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -21,13 +21,13 @@ char *argstostr(int ac, char **av)
 		b = 0;
 		while (av[a][b] != '\0')
 		{
-			count++;
+			ct++;
 			b++;
 		}
 		a++;
 	}
-	count = count + ac + 1;
-	str = malloc(sizeof(char) * count);
+	ct = ct + ac + 1;
+	str = malloc(sizeof(char) * ct);
 	if (str == NULL)
 	{
 		return (NULL);

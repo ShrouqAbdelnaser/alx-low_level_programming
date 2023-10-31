@@ -80,7 +80,7 @@ char **strtow(char *str)
 				c++;
 			}
 			w[b][c] = '\0';
-			b++; c = 0; length = 0; str++;
+			b++, c = 0, length = 0, str++;
 		}
 	}
 	return (w);
